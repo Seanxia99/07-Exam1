@@ -2,8 +2,8 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Shuang Xia.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -20,7 +20,7 @@ def main():
 def problem2a_testing():
     """ Tests the   sum_of_digits_of_sum_of_factors   function. """
     ############################################################################
-    #  TODO: 2. Implement this TEST function.  See the IMPORTANT NOTE below.
+    #  DONE: 2. Implement this TEST function.  See the IMPORTANT NOTE below.
     #     This problem TESTS the    sum_of_digits_of_sum_of_factors    function
     #     that is defined below.  Include at least **   4   ** tests.
     #     Use the usual format:
@@ -44,6 +44,33 @@ def problem2a_testing():
     print('---------------------------------------------------------')
     print('Testing the   sum_of_digits_of_sum_of_factors   function:')
     print('---------------------------------------------------------')
+
+    #Test 1:
+    expected = 0
+    answer = sum_of_digits_of_sum_of_factors(0)
+    print('Test 1 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    #Test 2:
+    expected = 1
+    answer = sum_of_digits_of_sum_of_factors(1)
+    print('Test 2 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    #Test 3:
+    expected = 3
+    answer = sum_of_digits_of_sum_of_factors(2)
+    print('Test 3 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    #Test 4:
+    expected = 4
+    answer = sum_of_digits_of_sum_of_factors(3)
+    print('Test 1 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+
+
 
 
 def sum_of_digits_of_sum_of_factors(n):
@@ -77,6 +104,10 @@ def sum_of_digits_of_sum_of_factors(n):
 #    the other functions.
 # TODO (continued):  After you have READ this _TODO_, change its _TODO_ to DONE.
 ################################################################################
+
+    total = 0
+    for k in range(n):
+        total = sum(math.factorial(n))
 
 def number_of_factors(n):
     """

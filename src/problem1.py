@@ -2,8 +2,8 @@
 Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Shuang Xia.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -43,6 +43,41 @@ def run_test_problem1a():
     problem1a(rectangle, square, 10, window)
     window.close_on_mouse_click()
 
+
+    rectangle = rg.Rectangle(rg.Point(100, 120), rg.Point(200, 170))
+    rectangle.outline_color = 'blue'
+    rectangle.outline_thickness = '1'
+    rectangle.attach_to(window)
+
+    center = rg.Point(125, 50)
+    square = rg.Square(center, 30)
+    square.fill_color = 'red'
+    square.attach_to(window)
+
+    point1 = rg.Point(150,120)
+    line = rg.Line(square.center, point1)
+    line.thickness = '5'
+    line.color = 'blue'
+    line.attach_to(window)
+
+    rectangle = rg.Rectangle(rg.Point(300, 70), rg.Point(400, 20))
+    rectangle.outline_thickness = '5'
+    rectangle.outline_color = 'magenta'
+    rectangle.attach_to(window)
+
+    center2 = rg.Point(250, 100)
+    square = rg.Square(center2, 50)
+    square.attach_to(window)
+
+    point2 = rg.Point(350, 20)
+    line = rg.Line(square.center, point2)
+    line.color = 'magenta'
+    line.thickness = '10'
+    line.attach_to(window)
+
+    window.render()
+    window.close_on_mouse_click()
+
     # A third test on ANOTHER window.
     title = 'Test 3 of problem1a: yellow & black'
     window = rg.RoseWindow(400, 300, title)
@@ -50,11 +85,23 @@ def run_test_problem1a():
     rectangle = rg.Rectangle(rg.Point(100, 100), rg.Point(50, 250))
     rectangle.outline_color = 'black'
     rectangle.outline_thickness = 5
+    rectangle.attach_to(window)
+
     square = rg.Square(rg.Point(300, 50), 80)
     square.fill_color = 'yellow'
-
-    problem1a(rectangle, square, 15, window)
+    square.attach_to(window)
+    window.render()
     window.close_on_mouse_click()
+
+    point3 = rg.Point(75, 100)
+    line = rg.Line(square.center, point3)
+    line.thickness = '15'
+    line.attach_to(window)
+
+    window.render()
+    window.close_on_mouse_click()
+
+
 
 
 def problem1a(rectangle, square, thickness, window):
@@ -89,9 +136,66 @@ def problem1a(rectangle, square, thickness, window):
       :type window:    rg.RoseWindow
     """
     # --------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.  SEE THE PICTURES in the PDF!
+    # DONE: 2. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
+
+
+    rectangle = rg.Rectangle(rg.Point(100, 120), rg.Point(200, 170))
+    rectangle.outline_color = 'blue'
+    rectangle.outline_thickness = '1'
+    rectangle.attach_to(window)
+
+    center = rg.Point(125, 50)
+    square = rg.Square(center, 30)
+    square.fill_color = 'red'
+    square.attach_to(window)
+
+    point1 = rg.Point(150,120)
+    line = rg.Line(square.center, point1)
+    line.thickness = '5'
+    line.color = 'blue'
+    line.attach_to(window)
+
+    rectangle = rg.Rectangle(rg.Point(300, 70), rg.Point(400, 20))
+    rectangle.outline_thickness = '5'
+    rectangle.outline_color = 'magenta'
+    rectangle.attach_to(window)
+
+    center2 = rg.Point(250, 100)
+    square = rg.Square(center2, 50)
+    square.attach_to(window)
+
+    point2 = rg.Point(350, 20)
+    line = rg.Line(square.center, point2)
+    line.color = 'magenta'
+    line.thickness = '10'
+    line.attach_to(window)
+
+    window.render()
+    window.continue_on_mouse_click()
+
+    title = 'Test 3 of problem1a: yellow & black'
+    window = rg.RoseWindow(400, 300, title)
+
+    rectangle = rg.Rectangle(rg.Point(100, 100), rg.Point(50, 250))
+    rectangle.outline_color = 'black'
+    rectangle.outline_thickness = '5'
+    rectangle.attach_to(window)
+
+    square = rg.Square(rg.Point(300, 50), 80)
+    square.fill_color = 'yellow'
+    square.attach_to(window)
+
+
+    point3 = rg.Point(75, 100)
+    line = rg.Line(square.center, point3)
+    line.color = 'black'
+    line.thickness = '15'
+    line.attach_to(window)
+
+    window.render()
+    window.continue_on_mouse_click()
 
 
 def run_test_problem1b():
@@ -152,6 +256,7 @@ def problem1b(point, win, width, height, color):
     # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
+
 
 
 # ------------------------------------------------------------------------------
